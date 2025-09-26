@@ -15,17 +15,19 @@
 */
 
 function solution(a, b, c){
-    let answer = 0;
-    // a가 b보다 작고, c 보다도 작으면 = a
-    if(a <b && a < c) {
-        return answer =a;
-    // b가 a보다 작고, c 보다도 작으면 = b
-    } else if (b < a && b < c) {
-        return answer = b;
-    // c가 a보다 작고, b 보다도 작으면 = c    
-    } else {
-        return answer = c;
-    }
+let result = 0;
+
+// a가 b와 c보다 작으면 a를 출력
+if (a < b && a < c) {
+  result = a;
+  // b가 a와 c보다 작으면 b를 출력
+} else if (b < a && b < c) {
+  result = b;
+  // 둘다 아니면 c를 출력
+} else {
+  result = c;
+}
+return result;
 }
 
 console.log(solution(6, 5, 11));
