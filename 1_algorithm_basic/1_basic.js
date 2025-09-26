@@ -15,13 +15,13 @@
 */
 
 function solution(a, b, c){
-  let result;
+  let res;
 
-  if (a > b) result = b;
-  else result = a;
-  if (c < result) result = c;
+  if (a > b) res = b;
+  else res = a;
+  if (c < res) res = c;
 
-  return result;
+  return res;
 }
 
 console.log(solution(6, 5, 11));
