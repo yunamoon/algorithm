@@ -15,18 +15,12 @@
 */
 
 function solution(a, b, c){
-  let result = 0;
+  let result;
 
-  // a가 b와 c보다 작으면 a를 출력.
-  if (a < b && a < c) {
-    result = a;
-    // b가 a와 c보다 작으면 b를 출력.
-  } else if (b < a && b < c) {
-    result = b;
-    // 둘다 아니면 c를 출력.
-  } else {
-    result = c;
-  }
+  if (a > b) result = b;
+  else result = a;
+  if (c < result) result = c;
+
   return result;
 }
 
