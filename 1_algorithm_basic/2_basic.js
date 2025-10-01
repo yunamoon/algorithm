@@ -17,14 +17,18 @@
 
  */
 
-function solution(a, b, c){
-    let answer="YES", max;
-    let tot=a+b+c;
-    if(a>b) max=a;
-    else max=b;
-    if(c>max) max=c;
-    if(tot-max<=max) answer="NO"; 
-    return answer;
+function solution(a, b, c) {
+  let res = "";
+
+  let arr = [a, b, c].sort((x, y) => x - y);
+
+  if (arr[0] + arr[1] > arr[2]) {
+    res = "YES";
+  } else {
+    res = "NO";
+  }
+
+  return res;
 }
 
 console.log(solution(13, 33, 17));
