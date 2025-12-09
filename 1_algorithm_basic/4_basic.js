@@ -12,12 +12,12 @@
  */
 
 function solution(n){
-    let answer=0;
-    for(let i=1; i<=n; i++){
-        answer=answer+i;
+    let res = 0;
+
+    for (i = 1; i <= n; i++) {
+      res = res + i;
     }
-    
-    return answer;
+    return res;
 }
 
 console.log(solution(10));
