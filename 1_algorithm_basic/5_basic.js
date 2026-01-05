@@ -10,14 +10,16 @@
 ▣ 출력예제 1 2
  */
 
-function solution(arr){         
-    let answer, min=Number.MAX_SAFE_INTEGER;
-    for(let i=0; i<arr.length; i++){
-        if(arr[i]<min) min=arr[i];
-    }
-    answer=min;
-    return answer;
+function solution(arr) {
+  let res = arr[0];
 
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] < res) {
+      res = arr[i];
+    }
+  }
+
+  return res;
 }
 
 let arr=[5, 7, 1, 3, 2, 9, 11];
